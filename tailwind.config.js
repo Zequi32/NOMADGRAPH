@@ -2,7 +2,9 @@
 module.exports = {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}", // adjust paths if needed
+    "./work.html",
+    "./contact.html",
+    "./src/**/*.{js,ts,jsx,tsx}", // Adjust paths if needed
   ],
   theme: {
     extend: {},
