@@ -9,112 +9,19 @@
 </head>
 <body>
     <header class="flex justify-between items-center py-4 px-6 bg-white shadow-md">
-        <h1>Photography Portfolio</h1>
+        <h1 class="text-gray-900">Photography Portfolio</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="work.html">Work</a>
-            <a href="contact.html">Contact</a>
+            <a href="index.html" class="text-gray-900">Home</a>
+            <a href="work.html" class="text-gray-900">Work</a>
+            <a href="contact.html" class="text-gray-900">Contact</a>
         </nav>
     </header>
     <main class="container mx-auto px-6">
-        <h2>Welcome to My Portfolio</h2>
-        <p>Explore my photography work and feel free to contact me for collaborations.</p>
+        <h2 class="text-2xl font-bold text-gray-900">Welcome to My Portfolio</h2>
+        <p class="text-gray-700">Explore my photography work and feel free to contact me for collaborations.</p>
     </main>
     <footer class="py-6 bg-white text-center">
-        <p>&copy; 2024 Matej Veselý. All rights reserved.</p>
+        <p class="text-gray-600">&copy; 2024 Matej Veselý. All rights reserved.</p>
     </footer>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Work</title>
-  <link href="dist/styles.css" rel="stylesheet"> <!-- Tailwind CSS file -->
-  <link href="styles.css" rel="stylesheet"> <!-- Custom styles -->
-</head>
-<body class="bg-gray-900 text-gray-200">
-
-  <!-- Navigation -->
-  <nav class="flex justify-between items-center py-4 px-6 bg-gray-800 shadow-md">
-    <div class="text-lg font-semibold">
-      <a href="index.html" class="text-gray-200">MV</a>
-    </div>
-    <div class="space-x-4">
-      <a href="work.html" class="text-gray-200">Work</a>
-      <a href="contact.html" class="text-gray-200">Contact</a>
-    </div>
-  </nav>
-
-  <!-- Header -->
-  <header class="text-center py-20 bg-gray-800">
-    <h1 class="text-4xl font-bold mb-4">My Work</h1>
-    <p class="text-lg text-gray-400">Showcasing some of my best projects.</p>
-  </header>
-
-  <!-- Main Content -->
-  <main class="container mx-auto px-6">
-    <section class="my-12">
-      <h2 class="text-3xl font-semibold mb-6">Projects</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 image-grid">
-        <!-- Project 1 -->
-        <div class="relative">
-          <img src="images/image1.jpg" alt="Project Image" class="w-full h-64 object-cover">
-          <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-            <div class="text-center">
-              <h3 class="text-white text-xl font-bold">Brawlhalla Midseason Championship 2024</h3>
-              <p class="text-gray-300">Photography</p>
-              <p class="text-gray-300">2024</p>
-            </div>
-          </div>
-        </div>
-        <!-- More projects -->
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="py-6 bg-gray-800 text-center">
-    <p class="text-gray-400">&copy; 2024 Matej Veselý. All rights reserved.</p>
-  </footer>
-
-  <!-- Link to external JavaScript file -->
-  <script src="gallery.js"></script>
-
-  <style>
-    .modal {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    .modal-content {
-      position: relative;
-      max-width: 80%;
-      max-height: 80%;
-    }
-
-    .modal-image {
-      width: 100%;
-      height: auto;
-    }
-
-    .close {
-      position: absolute;
-      top: 10px;
-      right: 20px;
-      color: white;
-      font-size: 30px;
-      cursor: pointer;
-    }
-  </style>
-
 </body>
 </html>
