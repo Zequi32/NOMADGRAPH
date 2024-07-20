@@ -1,42 +1,63 @@
-/* Custom CSS for additional styling beyond Tailwind */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f3f4f6; /* Background color for the whole page */
 }
 
 header {
-    border-bottom: 1px solid #333; /* Adds a border under the header */
+    background-color: #1a1a1a;
+}
+
+header h1 {
+    color: #fff;
+}
+
+header nav a {
+    color: #999;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: #fff;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main h2 {
+    color: #fff;
+}
+
+main p {
+    color: #ccc;
 }
 
 footer {
-    border-top: 1px solid #333; /* Adds a border above the footer */
+    background-color: #1a1a1a;
 }
 
-img {
-    max-width: 100%;
-    height: auto; /* Ensures images are responsive */
+footer p {
+    color: #999;
 }
 
-/* Example Grid System */
-.folder-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid for folders */
-    gap: 1rem; /* Space between grid items */
+.grid a img {
+    border: 2px solid #fff;
 }
 
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid for images */
-    gap: 1rem; /* Space between grid items */
+form label {
+    color: #ccc;
 }
 
-/* Navigation styles */
-nav a {
-    text-decoration: none; /* Removes underline from links */
-    color: #000; /* Sets link color to black */
+form input, form textarea {
+    border: 1px solid #444;
+    background-color: #222;
+    color: #fff;
 }
 
-nav a:hover {
-    text-decoration: underline; /* Adds underline on hover for better user interaction */
-    color: #555; /* Changes color on hover */
+form button {
+    background-color: #444;
+}
+
+form button:hover {
+    background-color: #666;
 }
