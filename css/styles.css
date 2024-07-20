@@ -1,7 +1,7 @@
-/* Custom CSS for additional styling beyond Tailwind */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f3f4f6; /* Background color for the whole page */
+    background-color: #1a1a1a; /* Dark background for the whole page */
+    color: #ffffff; /* Light text color for contrast */
 }
 
 header {
@@ -33,10 +33,10 @@ img {
 /* Navigation styles */
 nav a {
     text-decoration: none; /* Removes underline from links */
-    color: #000; /* Sets link color to black */
+    color: #ffffff; /* Sets link color to white */
 }
 
 nav a:hover {
     text-decoration: underline; /* Adds underline on hover for better user interaction */
-    color: #555; /* Changes color on hover */
+    color: #bbbbbb; /* Changes color on hover */
 }
