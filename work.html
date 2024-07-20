@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Work</title>
-  <link href="css/tailwind.css" rel="stylesheet"> <!-- Tailwind CSS file -->
-  <link href="css/styles.css" rel="stylesheet"> <!-- Custom styles -->
+  <link href="css/tailwind.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
 </head>
 <body class="bg-gray-900 text-gray-200">
 
@@ -15,7 +15,6 @@
       <a href="index.html" class="text-gray-200">MV</a>
     </div>
     <div class="space-x-4">
-      <a href="index.html" class="text-gray-200">Home</a>
       <a href="work.html" class="text-gray-200">Work</a>
       <a href="contact.html" class="text-gray-200">Contact</a>
     </div>
@@ -32,29 +31,7 @@
     <section class="my-12">
       <h2 class="text-3xl font-semibold mb-6">Projects</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- Project 1 -->
-        <div class="relative">
-          <img src="css/img/folder1/SIB1.jpg" alt="Project Image 1" class="w-full h-64 object-cover">
-          <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-            <div class="text-center">
-              <h3 class="text-white text-xl font-bold">Project Title 1</h3>
-              <p class="text-gray-300">Photography</p>
-              <p class="text-gray-300">2024</p>
-            </div>
-          </div>
-        </div>
-        <!-- Project 2 -->
-        <div class="relative">
-          <img src="css/img/folder2/image2.png" alt="Project Image 2" class="w-full h-64 object-cover">
-          <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
-            <div class="text-center">
-              <h3 class="text-white text-xl font-bold">Project Title 2</h3>
-              <p class="text-gray-300">Web Development</p>
-              <p class="text-gray-300">2024</p>
-            </div>
-          </div>
-        </div>
-        <!-- More projects can be added here following the same structure -->
+        <!-- Dynamic Project Images -->
       </div>
     </section>
   </main>
@@ -64,7 +41,85 @@
     <p class="text-gray-400">&copy; 2024 Matej Veselý. All rights reserved.</p>
   </footer>
 
-  <!-- Link to external JavaScript file -->
-  <script src="js/gallery.js"></script>
+  <script>
+    // JavaScript to dynamically load images
+    const folderPath = 'css/img/folder1/'; // Update this path as needed
+    const images = [
+      'SIB1.jpg',
+      'image2.png',
+      // Add more image filenames here
+    ];
+
+    const gridContainer = document.querySelector('.grid');
+    images.forEach(image => {
+      const div = document.createElement('div');
+      div.classList.add('relative', 'cursor-pointer');
+      div.innerHTML = `
+        <img src="${folderPath}${image}" alt="Project Image" class="w-full h-64 object-cover" onclick="openModal('${folderPath}${image}')">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+          <div class="text-center">
+            <h3 class="text-white text-xl font-bold">Project Title</h3>
+            <p class="text-gray-300">Photography</p>
+            <p class="text-gray-300">2024</p>
+          </div>
+        </div>
+      `;
+      gridContainer.appendChild(div);
+    });
+
+    function openModal(imageSrc) {
+      const modal = document.createElement('div');
+      modal.classList.add('modal');
+      modal.innerHTML = `
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <img src="${imageSrc}" alt="Full Size Image" class="modal-image">
+        </div>
+      `;
+      document.body.appendChild(modal);
+    }
+
+    function closeModal() {
+      const modal = document.querySelector('.modal');
+      if (modal) {
+        modal.remove();
+      }
+    }
+  </script>
+
+  <style>
+    .modal {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 1000;
+    }
+
+    .modal-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+    .modal-image {
+      width: 100%;
+      height: auto;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      color: white;
+      font-size: 30px;
+      cursor: pointer;
+    }
+  </style>
 </body>
 </html>
