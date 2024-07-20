@@ -4,53 +4,57 @@
 
 /* Custom Styles */
 body {
-    @apply bg-black text-white;
+    @apply bg-gray-100 text-gray-900;
 }
 
 header {
-    @apply p-4 flex justify-between items-center;
+    @apply bg-white shadow-md;
 }
 
 header h1 {
-    @apply text-2xl font-bold;
+    @apply text-lg font-bold;
 }
 
 header nav a {
-    @apply mr-4 text-gray-400 hover:text-white transition-colors duration-300;
+    @apply text-gray-700 hover:text-black transition-colors duration-300;
 }
 
 main {
-    @apply p-8;
+    @apply container mx-auto py-8;
 }
 
 main h2 {
-    @apply text-4xl font-bold;
+    @apply text-4xl font-bold text-gray-800;
 }
 
 main p {
-    @apply mt-4;
+    @apply mt-4 text-lg text-gray-600;
 }
 
 footer {
-    @apply p-4 text-center text-gray-400;
+    @apply bg-gray-100 text-center py-4 mt-8;
+}
+
+footer p {
+    @apply text-gray-500;
 }
 
 .grid a img {
     @apply w-full rounded-lg transition-transform duration-300 hover:scale-105;
 }
 
-.grid a p {
-    @apply mt-2 text-center;
-}
-
 form label {
-    @apply block mb-2;
+    @apply block mb-2 text-gray-700;
 }
 
 form input, form textarea {
-    @apply w-full p-2 mb-4 text-black rounded-lg;
+    @apply w-full p-2 mb-4 text-gray-900 border rounded-lg;
+}
+
+form input:focus, form textarea:focus {
+    @apply border-gray-500 outline-none;
 }
 
 form button {
-    @apply bg-white text-black p-2 rounded-lg hover:bg-gray-300 transition-colors duration-300;
+    @apply bg-gray-800 text-white p-2 rounded-lg hover:bg-gray-700 transition-colors duration-300;
 }
