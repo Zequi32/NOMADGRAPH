@@ -74,6 +74,9 @@
         <div class="modal-content">
           <span class="close" onclick="closeModal()">&times;</span>
           <img src="${imageSrc}" alt="Full Size Image" class="modal-image">
+          <div class="download-link">
+            <a href="${imageSrc}" download>Download Image</a>
+          </div>
         </div>
       `;
       document.body.appendChild(modal);
@@ -119,6 +122,25 @@
       color: white;
       font-size: 30px;
       cursor: pointer;
+    }
+
+    .download-link {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .download-link a {
+      background-color: #008CBA; /* Blue background */
+      color: white; /* White text */
+      padding: 10px 20px; /* Some padding */
+      text-align: center; /* Center the text */
+      text-decoration: none; /* Remove underline */
+      display: inline-block; /* Make the link a block element */
+      font-size: 16px; /* Increase font size */
+    }
+
+    .download-link a:hover {
+      background-color: #005f5f; /* Darker background on hover */
     }
   </style>
 </body>
