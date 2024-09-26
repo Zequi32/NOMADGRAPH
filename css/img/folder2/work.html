@@ -4,8 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Work</title>
+<<<<<<< HEAD
   <link href="tailwind.html" rel="stylesheet">
   <link href="Stles.cc" rel="stylesheet">
+=======
+  <link href="/css/tailwind.css" rel="stylesheet"> <!-- Ensure this path is correct -->
+  <link href="/css/styles.css" rel="stylesheet"> <!-- Ensure this path is correct -->
+>>>>>>> e61cf43f2ae9b4f70d1c2c159484b9e4feda3661
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -138,25 +143,25 @@
   <!-- Navigation -->
   <nav class="flex justify-between items-center py-4 px-6 bg-gray-800 shadow-md">
     <div class="text-lg font-semibold">
-      <a href="../../index.html" class="text-gray-200">MV</a>
+      <a href="/index.html" class="text-gray-200">NOMAD</a>
     </div>
     <div class="space-x-4">
-      <a href="../../work.html" class="text-gray-200">Work</a>
-      <a href="../../contact.html" class="text-gray-200">Contact</a>
+      <a href="/work.html" class="text-gray-200">Work</a>
+      <a href="/contact.html" class="text-gray-200">Contact</a>
     </div>
   </nav>
 
   <!-- Header -->
   <header class="text-center py-20 bg-gray-800">
     <h1 class="text-4xl font-bold mb-4">My Work</h1>
-    <p class="text-lg text-gray-400">Showcasing some of my best projects.</p>
+    <p class="text-lg text-gray-400">Mid-Season CEO Tournament SiB pictures.</p>
   </header>
 
   <!-- Main Content -->
   <main class="container mx-auto px-6">
     <section class="my-12">
       <h2 class="text-3xl font-semibold mb-6">Projects</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 image-grid">
         <!-- Dynamic Project Images -->
       </div>
     </section>
@@ -164,19 +169,23 @@
 
   <!-- Footer -->
   <footer class="py-6 bg-gray-800 text-center">
-    <p class="text-gray-400">&copy; 2024 Matej Veselý. All rights reserved.</p>
+    <p class="text-gray-400">&copy; 2024 Ezequiel Quintero. All rights reserved.</p>
   </footer>
 
   <script>
     // JavaScript to dynamically load images
-    const folderPath = '../../css/img/folder1/'; // Update this path as needed
+    const folderPath = 'img/folder1/'; // Update this path as needed
     const images = [
       'SIB1.jpg',
-      'image2.png',
+      'SIB2.jpg',
+      'SIBFAM.jpg',
+      'SIBFAM2.jpg',
+      'SIBFAM3.jpg',
+      'SIBFAM4.jpg',
       // Add more image filenames here
     ];
 
-    const gridContainer = document.querySelector('.grid');
+    const gridContainer = document.querySelector('.image-grid');
     images.forEach(image => {
       const div = document.createElement('div');
       div.classList.add('relative', 'cursor-pointer');
